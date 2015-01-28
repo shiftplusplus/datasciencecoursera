@@ -2,6 +2,7 @@
 x<-100L
 i<-10L
 runs=0L
+result = list(x=NULL,i=NULL)
 while((i>0)&& (x<150)){
     if(i==0){i<-1}
     set.seed(x-i) ## /=Inf,+=Inf,-=53,*=12,
@@ -9,6 +10,8 @@ while((i>0)&& (x<150)){
     i <- rpois((x*i),i)[x]
     runs<<-runs+1
     message(c("x:",x," i:",i))
+    result$x<-c(result$x,x)
+    result$i<-c(result$i,i)
 }
     
 print(runs)
