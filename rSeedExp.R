@@ -23,7 +23,7 @@ runs=0L
 result = list(x=NULL,i=NULL)
 while((i>0)&& (x<150) && runs<1000){
     if(i==0){i<-1}
-    set.seed(x+i) ## /=1,+=1,-=2,*=2,
+    set.seed(x+i)
     x <- rnorm((x*i),x,i)[i]
     i <- rnorm((x*i),i+x,x)[x]
     runs<<-runs+1
