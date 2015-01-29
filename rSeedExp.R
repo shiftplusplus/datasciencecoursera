@@ -3,7 +3,7 @@ x<-100L
 i<-10L
 runs=0L
 result = list(x=NULL,i=NULL)
-while((i>0)&& (x<150)){
+while((i>0)&& (x<150) && runs<1000){
     if(i==0){i<-1}
     set.seed(x-i) ## /=Inf,+=Inf,-=53,*=12,
     x <- rpois((x*i),x)[i]
